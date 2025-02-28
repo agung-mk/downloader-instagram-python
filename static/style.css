@@ -1,0 +1,91 @@
+body {  
+    font-family: 'Arial', sans-serif;  
+    background: linear-gradient(135deg, #007bff, #00c6ff);  
+    text-align: center;  
+    padding: 40px 10px;  
+    color: white;  
+}  
+  
+/* Container utama */  
+.container {  
+    background: white;  
+    padding: 25px;  
+    border-radius: 12px;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+    display: inline-block;  
+    color: black;  
+    max-width: 450px;  
+    width: 90%;  
+}  
+  
+/* Input & Button */  
+input {  
+    width: 100%; /* Lebar input mengikuti layar */  
+    max-width: 400px; /* Batas maksimal agar tidak terlalu lebar */  
+    padding: 10px;  
+    margin: 10px 0;  
+    border: 3px solid #ccc;  
+    border-radius: 6px;  
+    font-size: 16px;  
+}  
+  
+button {  
+    width: 100%;  
+    padding: 12px;  
+    background: #007bff;  
+    color: white;  
+    border: none;  
+    border-radius: 6px;  
+    cursor: pointer;  
+    font-size: 16px;  
+}  
+  
+button:hover {  
+    background: #0056b3;  
+}  
+  
+/* About & API Docs */  
+.about, .api-docs {  
+    margin: 30px auto;  
+    background: rgba(255, 255, 255, 0.95);  
+    padding: 20px;  
+    border-radius: 10px;  
+    color: black;  
+    display: inline-block;  
+    text-align: left;  
+    max-width: 800px;  
+    width: 90%;  
+}  
+  
+/* Heading */  
+h1, h2 {  
+    margin-bottom: 10px;  
+}  
+  
+h2 {  
+    font-size: 20px;  
+}  
+  
+/* Code Block */  
+pre {  
+    background: #222;  
+    color: #0f0;  
+    padding: 12px;  
+    border-radius: 8px;  
+    text-align: left;  
+    overflow-x: auto;  
+    font-size: 14px;  
+    line-height: 1.4;  
+}  
+  
+/* Responsiveness */  
+@media (max-width: 768px) {  
+    .container, .about, .api-docs {  
+        width: 95%;  
+        padding: 15px;  
+    }  
+  
+    input, button {  
+        font-size: 14px;  
+    }  
+}  

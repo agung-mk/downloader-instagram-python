@@ -1,0 +1,51 @@
+<!DOCTYPE html>  
+<html lang="id">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Facebook Video Downloader</title>  
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  
+</head>  
+<body>  
+    <div class="container">  
+        <h1>Facebook Video Downloader</h1>  
+        <p>Masukkan URL video Facebook untuk mengunduhnya.</p>  
+        <form method="POST">  
+            <input type="text" name="url" placeholder="Masukkan URL video Facebook" required>  
+            <button type="submit">Download</button>  
+        </form>  
+    </div>  
+  
+    <div class="about">  
+        <h2>🔹 Tentang Website Ini</h2>  
+        <p>Website ini memungkinkan Anda mengunduh video dari Facebook dengan mudah. Cukup masukkan URL video Facebook, lalu klik tombol download.</p>  
+    </div>  
+  
+    <div class="api-docs">  
+        <h2>📌 Cara Menggunakan API Endpoint</h2>  
+        <p>Anda juga dapat mengunduh video menggunakan API berikut:</p>  
+        <pre><code>POST {{ request.host_url }}api/download</code></pre>  
+  
+        <h3>📥 Request (JSON):</h3>  
+        <pre><code>{  
+    "url": "https://www.facebook.com/video-url"  
+}</code></pre>  
+  
+        <h3>📤 Response (JSON):</h3>  
+        <pre><code>{  
+    "status": "success",  
+    "download_url": "{{ request.host_url }}downloads/video.mp4"  
+}</code></pre>  
+  
+        <h3>📢 Contoh Penggunaan di JavaScript:</h3>  
+        <pre><code>fetch("{{ request.host_url }}api/download", {  
+    method: "POST",  
+    headers: { "Content-Type": "application/json" },  
+    body: JSON.stringify({ "url": "https://www.facebook.com/video-url" })  
+})  
+.then(response => response.json())  
+.then(data => console.log(data));</code></pre>  
+    </div>  
+</body>  
+</html>  
+  
